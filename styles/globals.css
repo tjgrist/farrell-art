@@ -14,3 +14,33 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.slide-container {
+  text-align: center;
+  margin: 0 150px;
+}
+
+@media screen and (max-width: 480px) {
+  .slide-container {
+    text-align: center;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .slide-container {
+    text-align: center;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .slide-container {
+    text-align: center;
+    margin: 0;
+  }
+}
+
+.each-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
