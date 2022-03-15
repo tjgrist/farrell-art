@@ -6,15 +6,15 @@ or right-clicking and then 'Get Info' on Mac
 
 const slideImages = [
   {
-    original: "/2.jpg",
-    thumbnail: "/2.jpg",
+    original: "/2.JPG",
+    thumbnail: "/2.JPG",
     caption: "Image 2",
     originalWidth: 2288,
     originalHeight: 1712,
   },
   {
-    original: "/3.jpg",
-    thumbnail: "/3.jpg",
+    original: "/3.JPG",
+    thumbnail: "/3.JPG",
     caption: "Image 3",
     originalWidth: 2288,
     originalHeight: 1712,
@@ -27,15 +27,15 @@ const slideImages = [
     originalHeight: 3024,
   },
   {
-    original: "/1.jpg",
-    thumbnail: "/1.jpg",
+    original: "/1.JPG",
+    thumbnail: "/1.JPG",
     caption: "Image 1",
     originalWidth: 5456,
     originalHeight: 3632,
   },
   {
-    original: "/4.jpg",
-    thumbnail: "/4.jpg",
+    original: "/4.JPG",
+    thumbnail: "/4.JPG",
     caption: "Image 4",
     originalWidth: 2288,
     originalHeight: 1712,
