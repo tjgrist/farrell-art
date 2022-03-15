@@ -6,25 +6,21 @@ or right-clicking and then 'Get Info' on Mac
 
 const slideImages = [
   {
-    url: "1.JPG",
-    caption: "Image 1",
-    width: 5456,
-    height: 3632,
-  },
-  {
-    url: "2.JPG",
+    original: "/2.JPG",
+    thumbnail: "/2.JPG",
     caption: "Image 2",
-    width: 2288,
-    height: 1712,
+    originalWidth: 2288,
+    originalHeight: 1712,
   },
   {
-    url: "3.JPG",
+    original: "/3.JPG",
+    thumbnail: "/3.JPG",
     caption: "Image 3",
-    width: 2288,
-    height: 1712,
+    originalWidth: 2288,
+    originalHeight: 1712,
   },
   // ... add more images here by copying lines 8-31 above and pasting on line 32.
-  // Add as many as you need, just be sure to edit the 'url', 'caption', 'width', and 'height' properties. 
+  // Add as many as you need, just be sure to edit the 'original', 'thumbnail', 'caption', 'originalWidth', and 'originalHeight' properties.
   // Make sure the capitalization of 'jpg' matches that of the image you upload.
   // You can rename or delete the examples above by deleting everything in the 'curly brackets'.
 ];

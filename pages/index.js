@@ -1,11 +1,9 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import { Slide } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
-import Image from "next/image";
 import Link from "next/link";
-import slideImages from "../src/images";
 import email from "../src/email";
+import Gallery from "../src/gallery";
 
 export default function Home() {
   return (
@@ -20,25 +18,7 @@ export default function Home() {
         <br />
         <h1 className={styles.title}>Meegan Farrell Art</h1>
         <br />
-        <div className="slide-container">
-          <Slide>
-            {slideImages.map((slideImage, index) => (
-              <>
-                <div className="each-slide" key={index}>
-                  <Image
-                    src={`/${slideImage.url}`}
-                    alt={slideImage.caption}
-                    width={slideImage.width}
-                    height={slideImage.height}
-                    layout="intrinsic"
-                    quality={100}
-                  />
-                </div>
-                <p>{slideImage.caption}</p>
-              </>
-            ))}
-          </Slide>
-        </div>
+        <Gallery/>
       </main>
 
       <footer className={styles.footer}>
