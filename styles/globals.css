@@ -46,6 +46,7 @@ a {
 }
 
 .fullScreenButton {
+  cursor: pointer;
   font-size: 24px;
   padding: 10px 0;
 }
