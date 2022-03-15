@@ -11,8 +11,8 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
-        <meta name="description" content="Meegan Farrell art portfolio" />
+        <title>Meegan Farrell Art</title>
+        <meta name="description" content="Meegan Farrell Art Portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -31,6 +31,7 @@ export default function Home() {
                     width={slideImage.width}
                     height={slideImage.height}
                     layout="intrinsic"
+                    quality={100}
                   />
                 </div>
                 <p className={styles.description}>{slideImage.caption}</p>
