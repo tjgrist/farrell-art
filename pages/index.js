@@ -34,7 +34,7 @@ export default function Home() {
                     quality={100}
                   />
                 </div>
-                <p className={styles.description}>{slideImage.caption}</p>
+                <p>{slideImage.caption}</p>
               </>
             ))}
           </Slide>
