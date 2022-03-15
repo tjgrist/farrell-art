@@ -31,6 +31,7 @@ const slideImages = [
     },
 
     // ... add more images here by copying lines 8-31 above and pasting on line 32. 
+    // Add as many as you need, just be sure to edit the 'url', 'caption', 'width', and 'height' properties.
     // You can rename or delete the examples above by deleting everything in the 'curly brackets'.
   ];
 
