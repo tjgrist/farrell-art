@@ -1,6 +1,5 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import "react-slideshow-image/dist/styles.css";
 import Link from "next/link";
 import email from "../src/email";
 import Gallery from "../src/gallery";
