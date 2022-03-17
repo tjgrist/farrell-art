@@ -11,6 +11,7 @@ export default function Gallery() {
           showPlayButton={false}
           showNav={false}
           items={images}
+          showFullScreenButton={false}
           renderFullscreenButton={(onClick, isFullScreen) => (
             <div className="fullScreenButton">{isFullScreen ? <BsFullscreenExit style={{color: "white"}} onClick={onClick}/> : <BsArrowsFullscreen onClick={onClick}/>}</div>
           )}
