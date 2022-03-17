@@ -16,8 +16,8 @@ export default function Gallery() {
           showBullets={false}
           showPlayButton={false}
           showNav={false}
+          showFullscreenButton={false}
           items={images}
-          showFullScreenButton={false}
         />
       </div>
     </>
