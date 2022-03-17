@@ -359,8 +359,8 @@ const slideImages = [
     original: "/DSC00470.jpg",
     thumbnail: "/DSC00470.jpg",
     caption: "",
-    // originalWidth: ,
-    // originalHeight: ,
+    originalWidth: 3489,
+    originalHeight: 3205,
   },
   {
     original: "/DSC00477.jpg",
