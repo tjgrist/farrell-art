@@ -2,6 +2,12 @@ import ImageGallery from "react-image-gallery";
 import images from "./images";
 import { BsArrowsFullscreen, BsFullscreenExit }from "react-icons/bs";
 
+/*
+          renderFullscreenButton={(onClick, isFullScreen) => (
+            <div className="fullScreenButton">{isFullScreen ? <BsFullscreenExit style={{color: "white"}} onClick={onClick}/> : <BsArrowsFullscreen onClick={onClick}/>}</div>
+          )}
+*/
+
 export default function Gallery() {
   return (
     <>
@@ -12,9 +18,6 @@ export default function Gallery() {
           showNav={false}
           items={images}
           showFullScreenButton={false}
-          renderFullscreenButton={(onClick, isFullScreen) => (
-            <div className="fullScreenButton">{isFullScreen ? <BsFullscreenExit style={{color: "white"}} onClick={onClick}/> : <BsArrowsFullscreen onClick={onClick}/>}</div>
-          )}
         />
       </div>
     </>
