@@ -397,6 +397,13 @@ const slideImages = [
     originalWidth: 3161,
     originalHeight: 3860,
   },
+  {
+    original: "/F665C9E7-F768-4A40-A31F-B3EF0F02FD5F.jpg",
+    thumbnail: "/F665C9E7-F768-4A40-A31F-B3EF0F02FD5F.jpg",
+    caption: "",
+    originalWidth: 900,
+    originalHeight: 646,
+  }
   // ... add more images here by copying lines 8-31 above and pasting on line 32.
   // Add as many as you need, just be sure to edit the 'original', 'thumbnail', 'caption', 'originalWidth', and 'originalHeight' properties.
   // Make sure the capitalization of 'jpg' matches that of the image you upload.
