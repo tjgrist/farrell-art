@@ -403,22 +403,12 @@ const slideImages = [
     caption: "",
     originalWidth: 900,
     originalHeight: 646,
-  }
-  // ... add more images here by copying lines 8-31 above and pasting on line 32.
+  },
+
+  // ... add more images here by copying what's inside the curly brackets above  { .... } and pasting it on the next line
   // Add as many as you need, just be sure to edit the 'original', 'thumbnail', 'caption', 'originalWidth', and 'originalHeight' properties.
   // Make sure the capitalization of 'jpg' matches that of the image you upload.
   // You can rename or delete the examples above by deleting everything in the 'curly brackets'.
 ];
-
-slideImages.forEach((i, idx) => { 
-  i.originalAlt = `Meegan Farrell original art piece ${idx + 1}`
-  i.thumbnailAlt = `Meegan Farrell original art piece ${idx + 1}`
-  i.originalTitle = i.original
-  i.loading = idx === 0 ? "eager" : "lazy"
-  i.thumbnailLoading = idx === 0 ? "eager" : "lazy"
-  i.originalWidth = null
-  i.originalHeight = null
-});
-
 
 export default slideImages;
