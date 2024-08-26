@@ -1,6 +1,5 @@
 import ImageGallery from "react-image-gallery";
-import imageData from "./images";
-import { useMemo } from "react";
+import createImages from "./images";
 
 // import { BsArrowsFullscreen, BsFullscreenExit }from "react-icons/bs";
 
@@ -17,24 +16,6 @@ export default function Gallery() {
       window.open(e.target.title, '_blank', 'noopener,noreferrer');
   }
 
-  const randomize = (array) => { 
-    return array.sort(() => Math.random() - 0.5);
-  }
-
-  const images = useMemo(() => {
-    const randomized = randomize(imageData);
-    return randomized.map((i, idx) => { 
-      i.originalAlt = `Meegan Farrell original art piece ${idx + 1}`
-      i.thumbnailAlt = `Meegan Farrell original art piece ${idx + 1}`
-      i.originalTitle = i.original
-      i.loading = idx === 0 ? "eager" : "lazy"
-      i.thumbnailLoading = idx === 0 ? "eager" : "lazy"
-      i.originalWidth = null
-      i.originalHeight = null
-      return i;
-    });
-  }, []);
-
   return (
     <>
       <div className="slide-container">
@@ -43,7 +24,7 @@ export default function Gallery() {
           showPlayButton={false}
           showNav={false}
           showFullscreenButton={false}
-          items={images}
+          items={createImages}
           lazyLoad={false}
           thumbnailPosition="top"
           onClick={handleClick}

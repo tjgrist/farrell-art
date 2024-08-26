@@ -1,11 +1,9 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
-import Link from "next/link";
+import styles from "../styles/Main.module.css";
 import Script from 'next/script'
-import email from "../src/email";
 import Gallery from "../src/gallery";
-import { Analytics } from "@vercel/analytics/react"
 import description from "../src/description";
+import Footer from "../src/footer";
 
 export default function Home() {
   return (
@@ -37,12 +35,7 @@ export default function Home() {
         <Gallery/>
       </main>
 
-      <footer className={styles.footer}>
-        <span className={styles.logo}>
-          <Link href={`mailto:${email}`}>Contact</Link>
-        </span>
-        <Analytics />
-      </footer>
+      <Footer />
     </div>
   );
 }
