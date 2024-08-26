@@ -1,0 +1,12 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Allow crawling of API routes (adjust as needed)
+Allow: /api/
+
+# Specify sitemap location
+Sitemap: https://meegan-farrell-art.site/sitemap.xml
+
+# Crawl-delay example (use with caution)
+# Crawl-delay: 10

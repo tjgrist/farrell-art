@@ -413,6 +413,7 @@ const slideImages = [
 slideImages.forEach((i, idx) => { 
   i.originalAlt = `Meegan Farrell original art piece ${idx + 1}`
   i.thumbnailAlt = `Meegan Farrell original art piece ${idx + 1}`
+  i.originalTitle = i.original
   i.loading = idx === 0 ? "eager" : "lazy"
   i.thumbnailLoading = idx === 0 ? "eager" : "lazy"
   i.originalWidth = null
