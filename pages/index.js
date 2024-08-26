@@ -5,13 +5,14 @@ import Script from 'next/script'
 import email from "../src/email";
 import Gallery from "../src/gallery";
 import { Analytics } from "@vercel/analytics/react"
+import description from "../src/description";
 
 export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
         <title>Meegan Farrell Art</title>
-        <meta name="description" content="Meegan Farrell Art Portfolio" />
+        <meta name="description" content={description} />
         <link rel="icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
