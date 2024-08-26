@@ -4,6 +4,7 @@ import Link from "next/link";
 import Script from 'next/script'
 import email from "../src/email";
 import Gallery from "../src/gallery";
+import { Analytics } from "@vercel/analytics/react"
 
 export default function Home() {
   return (
@@ -42,6 +43,7 @@ export default function Home() {
         <span className={styles.logo}>
           <Link href={`mailto:${email}`}>Contact</Link>
         </span>
+        <Analytics />
       </footer>
     </div>
   );
