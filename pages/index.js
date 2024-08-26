@@ -32,9 +32,7 @@ export default function Home() {
       </Script>
 
       <main>
-        <br />
         <h1 className={styles.title}>Meegan Farrell Art</h1>
-        <br />
         <Gallery/>
       </main>
 
