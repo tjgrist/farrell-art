@@ -1,4 +1,4 @@
-Site: [https://meegan-farrell-art.vercel.app](https://meegan-farrell-art.vercel.app)
+Site: [https://meegan-farrell-art.vercel.app](https://meegan-farrell-art.site)
 
 ## Adding images
 
