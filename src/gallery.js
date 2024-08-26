@@ -1,20 +1,33 @@
 import ImageGallery from "react-image-gallery";
-import createImages from "./images";
-
-// import { BsArrowsFullscreen, BsFullscreenExit }from "react-icons/bs";
-
-/*
-          renderFullscreenButton={(onClick, isFullScreen) => (
-            <div className="fullScreenButton">{isFullScreen ? <BsFullscreenExit style={{color: "white"}} onClick={onClick}/> : <BsArrowsFullscreen onClick={onClick}/>}</div>
-          )}
-*/
+import imageData from "./images";
+import { useRouter } from "next/router";
+import { useMemo } from "react";
 
 export default function Gallery() {
+  const router = useRouter();
 
   const handleClick = (e) => {
-      e.preventDefault();
-      window.open(e.target.title, '_blank', 'noopener,noreferrer');
+    e.preventDefault();
+    const title = e.target.getAttribute("title");
+    router.push(`/${title}`);
+  };
+
+  const randomize = (array) => { 
+    return array.sort(() => Math.random() - 0.5);
   }
+  
+  const images = useMemo(() => {
+    const randomized = randomize(imageData);
+    return randomized.map((i, idx) => { 
+      i.thumbnail = i.original;
+      i.originalAlt = `Meegan Farrell original art piece ${idx + 1}`
+      i.thumbnailAlt = `Meegan Farrell original art piece ${idx + 1}`
+      i.originalTitle = i.slug
+      i.loading = idx === 0 ? "eager" : "lazy"
+      i.thumbnailLoading = idx === 0 ? "eager" : "lazy"
+      return i;
+    });
+  }, []);
 
   return (
     <>
@@ -24,7 +37,7 @@ export default function Gallery() {
           showPlayButton={false}
           showNav={false}
           showFullscreenButton={false}
-          items={createImages}
+          items={images}
           lazyLoad={false}
           thumbnailPosition="top"
           onClick={handleClick}

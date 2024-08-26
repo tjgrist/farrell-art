@@ -1,262 +1,298 @@
-/* 
-Travis: put the name of the image here, give it a caption if you want, 
-*/
-
-import { getS3ImageUrl } from "./utils/s3ImageUrl";
+const bucketName = process.env.NEXT_PUBLIC_S3_BUCKET_NAME;
+const region = process.env.NEXT_PUBLIC_S3_REGION;
+const s3url = `https://${bucketName}.s3.${region}.amazonaws.com`;
 
 const slideImages = [
   {
-    original: "DSC00318.jpg",
+    original: `${s3url}/DSC00318.jpg`,
     caption: "",
+    slug: "DSC00318"
   },
   {
-    original: "DSC00319.jpg",
+    original: `${s3url}/DSC00319.jpg`,
     caption: "",
+    slug: "DSC00319"
   },
   {
-    original: "DSC00335.jpg",
+    original: `${s3url}/DSC00335.jpg`,
     caption: "",
+    slug: "DSC00335"
   },
   {
-    original: "DSC00337.jpg",
+    original: `${s3url}/DSC00337.jpg`,
     caption: "",
+    slug: "DSC00337"
   },
   {
-    original: "DSC00395.jpg",
+    original: `${s3url}/DSC00395.jpg`,
     caption: "",
+    slug: "DSC00395"
   },
   {
-    original: "DSC00416.jpg",
+    original: `${s3url}/DSC00416.jpg`,
     caption: "",
+    slug: "DSC00416"
   },
   {
-    original: "DSC00421.jpg",
+    original: `${s3url}/DSC00421.jpg`,
     caption: "",
+    slug: "DSC00421"
   },
   {
-    original: "DSC00424.jpg",
+    original: `${s3url}/DSC00424.jpg`,
     caption: "",
+    slug: "DSC00424"
   },
   {
-    original: "DSC00452.jpg",
+    original: `${s3url}/DSC00452.jpg`,
     caption: "",
+    slug: "DSC00452"
   },
   {
-    original: "DSC00464.jpg",
+    original: `${s3url}/DSC00464.jpg`,
     caption: "",
+    slug: "DSC00464"
   },
   {
-    original: "DSC00480.jpg",
+    original: `${s3url}/DSC00480.jpg`,
     caption: "",
+    slug: "DSC00480"
   },
   {
-    original: "DSC00323.jpg",
+    original: `${s3url}/DSC00323.jpg`,
     caption: "",
+    slug: "DSC00323"
   },
   {
-    original: "DSC00327.jpg",
+    original: `${s3url}/DSC00327.jpg`,
     caption: "",
+    slug: "DSC00327"
   },
   {
-    original: "DSC00328.jpg",
+    original: `${s3url}/DSC00328.jpg`,
     caption: "",
+    slug: "DSC00328"
   },
   {
-    original: "DSC00326.jpg",
+    original: `${s3url}/DSC00326.jpg`,
     caption: "",
+    slug: "DSC00326"
   },
   {
-    original: "DSC00330.jpg",
+    original: `${s3url}/DSC00330.jpg`,
     caption: "",
+    slug: "DSC00330"
   },
   {
-    original: "DSC00331.jpg",
+    original: `${s3url}/DSC00331.jpg`,
     caption: "",
+    slug: "DSC00331"
   },
   {
-    original: "DSC00332.jpg",
+    original: `${s3url}/DSC00332.jpg`,
     caption: "",
+    slug: "DSC00332"
   },
   {
-    original: "DSC00334.jpg",
+    original: `${s3url}/DSC00334.jpg`,
     caption: "",
+    slug: "DSC00334"
   },
   {
-    original: "DSC00336.jpg",
+    original: `${s3url}/DSC00336.jpg`,
     caption: "",
+    slug: "DSC00336"
   },
   {
-    original: "DSC00340.jpg",
+    original: `${s3url}/DSC00340.jpg`,
     caption: "",
+    slug: "DSC00340"
   },
   {
-    original: "DSC00345.jpg",
+    original: `${s3url}/DSC00345.jpg`,
     caption: "",
+    slug: "DSC00345"
   },
   {
-    original: "DSC00349.jpg",
+    original: `${s3url}/DSC00349.jpg`,
     caption: "",
+    slug: "DSC00349"
   },
   {
-    original: "DSC00352.jpg",
+    original: `${s3url}/DSC00352.jpg`,
     caption: "",
+    slug: "DSC00352"
   },
   {
-    original: "DSC00355.jpg",
+    original: `${s3url}/DSC00355.jpg`,
     caption: "",
+    slug: "DSC00355"
   },
   {
-    original: "DSC00356.jpg",
+    original: `${s3url}/DSC00356.jpg`,
     caption: "",
+    slug: "DSC00356"
   },
   {
-    original: "DSC00357.jpg",
+    original: `${s3url}/DSC00357.jpg`,
     caption: "",
+    slug: "DSC00357"
   },
   {
-    original: "DSC00369.jpg",
+    original: `${s3url}/DSC00369.jpg`,
     caption: "",
+    slug: "DSC00369"
   },
   {
-    original: "DSC00370.jpg",
+    original: `${s3url}/DSC00370.jpg`,
     caption: "",
+    slug: "DSC00370"
   },
   {
-    original: "DSC00371.jpg",
+    original: `${s3url}/DSC00371.jpg`,
     caption: "",
+    slug: "DSC00371"
   },
   {
-    original: "DSC00373.jpg",
+    original: `${s3url}/DSC00373.jpg`,
     caption: "",
+    slug: "DSC00373"
   },
   {
-    original: "DSC00374.jpg",
+    original: `${s3url}/DSC00374.jpg`,
     caption: "",
+    slug: "DSC00374"
   },
   {
-    original: "DSC00378.jpg",
+    original: `${s3url}/DSC00378.jpg`,
     caption: "",
+    slug: "DSC00378"
   },
   {
-    original: "DSC00381.jpg",
+    original: `${s3url}/DSC00381.jpg`,
     caption: "",
+    slug: "DSC00381"
   },
   {
-    original: "DSC00382.jpg",
+    original: `${s3url}/DSC00382.jpg`,
     caption: "",
+    slug: "DSC00382"
   },
   {
-    original: "DSC00387.jpg",
+    original: `${s3url}/DSC00387.jpg`,
     caption: "",
+    slug: "DSC00387"
   },
   {
-    original: "DSC00391.jpg",
+    original: `${s3url}/DSC00391.jpg`,
     caption: "",
+    slug: "DSC00391"
   },
   {
-    original: "DSC00396.jpg",
+    original: `${s3url}/DSC00396.jpg`,
     caption: "",
+    slug: "DSC00396"
   },
   {
-    original: "DSC00397.jpg",
+    original: `${s3url}/DSC00397.jpg`,
     caption: "",
+    slug: "DSC00397"
   },
   {
-    original: "DSC00398.jpg",
+    original: `${s3url}/DSC00398.jpg`,
     caption: "",
+    slug: "DSC00398"
   },
   {
-    original: "DSC00404.jpg",
+    original: `${s3url}/DSC00404.jpg`,
     caption: "",
+    slug: "DSC00404"
   },
   {
-    original: "DSC00408.jpg",
+    original: `${s3url}/DSC00408.jpg`,
     caption: "",
+    slug: "DSC00408"
   },
   {
-    original: "DSC00412.jpg",
+    original: `${s3url}/DSC00412.jpg`,
     caption: "",
+    slug: "DSC00412"
   },
   {
-    original: "DSC00417.jpg",
+    original: `${s3url}/DSC00417.jpg`,
     caption: "",
+    slug: "DSC00417"
   },
   {
-    original: "DSC00420.jpg",
+    original: `${s3url}/DSC00420.jpg`,
     caption: "",
+    slug: "DSC00420"
   },
   {
-    original: "DSC00433.jpg",
+    original: `${s3url}/DSC00433.jpg`,
     caption: "",
+    slug: "DSC00433"
   },
   {
-    original: "DSC00434.jpg",
+    original: `${s3url}/DSC00434.jpg`,
     caption: "",
+    slug: "DSC00434"
   },
   {
-    original: "DSC00441.jpg",
+    original: `${s3url}/DSC00441.jpg`,
     caption: "",
+    slug: "DSC00441"
   },
   {
-    original: "DSC00446.jpg",
+    original: `${s3url}/DSC00446.jpg`,
     caption: "",
+    slug: "DSC00446"
   },
   {
-    original: "DSC00466.jpg",
+    original: `${s3url}/DSC00466.jpg`,
     caption: "",
+    slug: "DSC00466"
   },
   {
-    original: "DSC00470.jpg",
+    original: `${s3url}/DSC00470.jpg`,
     caption: "",
+    slug: "DSC00470"
   },
   {
-    original: "DSC00477.jpg",
+    original: `${s3url}/DSC00477.jpg`,
     caption: "",
+    slug: "DSC00477"
   },
   {
-    original: "DSC00483.jpg",
+    original: `${s3url}/DSC00483.jpg`,
     caption: "",
+    slug: "DSC00483"
   },
   {
-    original: "DSC00485.jpg",
+    original: `${s3url}/DSC00485.jpg`,
     caption: "",
+    slug: "DSC00485"
   },
   {
-    original: "DSC00492.jpg",
+    original: `${s3url}/DSC00492.jpg`,
     caption: "",
+    slug: "DSC00492"
   },
   {
-    original: "DSC00508.jpg",
+    original: `${s3url}/DSC00508.jpg`,
     caption: "",
+    slug: "DSC00508"
   },
   {
-    original: "F665C9E7-F768-4A40-A31F-B3EF0F02FD5F.jpg",
+    original: `${s3url}/F665C9E7-F768-4A40-A31F-B3EF0F02FD5F.jpg`,
     caption: "",
+    slug: "F665C9E7-F768-4A40-A31F-B3EF0F02FD5F"
   },
-
-  // ... add more images here by copying what's inside the curly brackets above  { .... } and pasting it on the next line
-  // Add as many as you need, just be sure to edit the 'original', 'caption' properties.
-  // Make sure the capitalization of 'jpg' matches that of the image you upload.
-  // You can rename or delete the examples above by deleting everything in the 'curly brackets'.
+  {
+    original: `${s3url}/IMAGE_3064-2.jpg`,
+    caption: "",
+    slug: "IMAGE_3064-2"
+  },
 ];
 
-const randomize = (array) => { 
-  return array.sort(() => Math.random() - 0.5);
-}
-
-const createImages = () => {
-  const randomized = randomize(slideImages);
-  return randomized.map((i, idx) => { 
-    const url = getS3ImageUrl(i.original);
-    i.original = url;
-    i.thumbnail = url;
-    i.originalAlt = `Meegan Farrell original art piece ${idx + 1}`
-    i.thumbnailAlt = `Meegan Farrell original art piece ${idx + 1}`
-    i.originalTitle = i.original
-    i.loading = idx === 0 ? "eager" : "lazy"
-    i.thumbnailLoading = idx === 0 ? "eager" : "lazy"
-    return i;
-  });
-};
-
-export default createImages();
+export default slideImages;
