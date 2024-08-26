@@ -410,4 +410,10 @@ const slideImages = [
   // You can rename or delete the examples above by deleting everything in the 'curly brackets'.
 ];
 
+slideImages.forEach((i, idx) => { 
+  i.originalAlt = `Meegan Farrell original art piece ${idx + 1}`
+  i.thumbnailAlt = `Meegan Farrell original art piece ${idx + 1}`
+  i.lazyLoad = idx === 0 ? false : true
+});
+
 export default slideImages;
