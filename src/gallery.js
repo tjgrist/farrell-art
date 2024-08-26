@@ -1,6 +1,7 @@
 import ImageGallery from "react-image-gallery";
 import images from "./images";
-import { BsArrowsFullscreen, BsFullscreenExit }from "react-icons/bs";
+
+// import { BsArrowsFullscreen, BsFullscreenExit }from "react-icons/bs";
 
 /*
           renderFullscreenButton={(onClick, isFullScreen) => (
@@ -9,6 +10,11 @@ import { BsArrowsFullscreen, BsFullscreenExit }from "react-icons/bs";
 */
 
 export default function Gallery() {
+
+  const handleClick = (e) => {
+      window.open(e.target.title, '_blank', 'noopener,noreferrer');
+  }
+
   return (
     <>
       <div className="slide-container">
@@ -20,6 +26,7 @@ export default function Gallery() {
           items={images}
           lazyLoad={false}
           thumbnailPosition="top"
+          onClick={handleClick}
         />
       </div>
     </>
