@@ -18,6 +18,8 @@ export default function Gallery() {
           showNav={false}
           showFullscreenButton={false}
           items={images}
+          lazyLoad={false}
+          thumbnailPosition="top"
         />
       </div>
     </>
