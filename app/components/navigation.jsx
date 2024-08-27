@@ -36,7 +36,7 @@ const Navigation = () => {
                   className={`px-3 py-2 rounded-md text-sm font-medium ${
                     pathname === item.path
                       ? 'bg-gray-900 text-white'
-                      : 'text-gray-700 hover:bg-gray-400 hover:text-white'
+                      : 'text-gray-700 hover:bg-gray-300 hover:text-white'
                   }`}
                 >
                   {item.name}
@@ -70,7 +70,7 @@ const Navigation = () => {
                 className={`block px-3 py-2 rounded-md text-base font-medium ${
                   pathname === item.path
                     ? 'bg-gray-900 text-white'
-                    : 'text-gray-700 hover:bg-gray-400 hover:text-white'
+                    : 'text-gray-700 hover:bg-gray-300 hover:text-white'
                 }`}
                 onClick={toggleMenu}
               >
