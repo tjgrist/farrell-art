@@ -1,7 +1,8 @@
-/* eslint-disable @next/next/no-img-element */
+'use client';
+
 import { useCallback } from "react";
 import ImageGallery from "react-image-gallery";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 export default function Gallery({ initialProcessedImages }) {
   const router = useRouter();

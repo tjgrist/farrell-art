@@ -2,7 +2,15 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['meegan-farrell-art-bucket.s3.us-east-1.amazonaws.com'],
+    formats: ['image/avif', 'image/webp'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'meegan-farrell-art-bucket.s3.amazonaws.com',
+        port: '',
+        pathname: '/*',
+      },
+    ],
   },
 }
 

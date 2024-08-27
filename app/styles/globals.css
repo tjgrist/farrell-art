@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .container {
+    @apply px-4 sm:px-6 lg:px-8 mx-auto;
+  }
+
+  .main {
+    @apply min-h-screen py-16 flex flex-col justify-center items-center;
+  }
+
+  .footer {
+    @apply m-4 flex justify-center items-center py-8 border-t border-gray-200;
+  }
+
+  .footer a {
+    @apply flex justify-center items-center flex-grow;
+  }
+
+  .title a {
+    @apply text-blue-600 no-underline hover:underline focus:underline active:underline;
+  }
+
+  .title {
+    @apply m-5 text-4xl text-center;
+  }
+
+  .description {
+    @apply my-16 text-2xl text-center;
+  }
+
+  .code {
+    @apply bg-gray-100 rounded-md p-3 text-lg font-mono;
+  }
+
+  .grid {
+    @apply flex items-center justify-center flex-wrap max-w-3xl;
+  }
+
+  .card {
+    @apply m-4 p-6 text-left border border-gray-200 rounded-lg transition-colors duration-150 ease-in-out hover:text-blue-600 hover:border-blue-600 max-w-sm;
+  }
+
+  .card h2 {
+    @apply mb-4 text-2xl;
+  }
+
+  .card p {
+    @apply text-xl leading-relaxed;
+  }
+
+  .logo {
+    @apply h-4 ml-2;
+  }
+
+  .about-description {
+    @apply text-left max-w-3xl mx-auto px-5;
+  }
+
+  .about-description p {
+    @apply mb-4;
+  }
+
+  .image-container {
+    @apply w-full max-w-6xl mx-auto;
+  }
+
+  .responsive-image {
+    @apply block w-full h-auto max-w-full object-contain;
+  }
+
+  .button {
+    @apply inline-block px-5 py-2 mt-5 bg-blue-900 text-white no-underline rounded transition-colors duration-300 ease-in-out hover:bg-blue-800;
+  }
+
+  .not-found-container {
+    @apply text-center p-5;
+  }
+
+  .not-found-title {
+    @apply text-4xl text-gray-800 mb-5;
+  }
+
+  .not-found-description {
+    @apply mb-5;
+  }
+
+  .not-found-image-container {
+    @apply my-5;
+  }
+
+  .not-found-image {
+    @apply max-w-full h-auto;
+  }
+
+  .not-found-button {
+    @apply inline-block px-5 py-2 bg-blue-600 text-white no-underline rounded transition-colors duration-300 ease-in-out hover:bg-blue-700;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    @apply w-full flex-col;
+  }
+}

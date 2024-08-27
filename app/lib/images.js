@@ -1,4 +1,4 @@
-import imagesMetadata from "../imagesMetadata.json";
+import imagesMetadata from "../../imagesMetadata.json";
 
 const imageData = imagesMetadata.map(img => ({
   ...img,
@@ -7,4 +7,4 @@ const imageData = imagesMetadata.map(img => ({
   title: img.title,
 }));
 
-export default imageData;
+export default imageData; 
