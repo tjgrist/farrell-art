@@ -1,20 +1,19 @@
-import { useRouter } from 'next/router';
+/* eslint-disable @next/next/no-img-element */
 import Head from 'next/head';
-import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../styles/Main.module.css';
 import images from '../src/images';
 
-export default function ViewPiece() {
-  const router = useRouter();
-  const { slug } = router.query;
-
-  // Find the image data based on the slug
-  const image = images.find(img => img.slug === slug);
-
-  // If image is not found, you might want to handle this case (e.g., show an error message or redirect)
+export default function ViewPiece({ image, slug }) {
   if (!image) {
-    return <div>Loading...</div>;
+    return (
+      <div className={styles.container}>
+        <h1>Art piece not found</h1>
+        <Link href="/">
+          <a className={styles.button}>Back to Gallery</a>
+        </Link>
+      </div>
+    );
   }
 
   return (
@@ -29,13 +28,10 @@ export default function ViewPiece() {
         <h1 className={styles.title}>{slug}</h1>
 
         <div className={styles.imageContainer}>
-          <Image
+          <img
             src={image.original}
             alt={`Image ${slug}`}
-            layout="responsive"
-            width={800}
-            height={600}
-            objectFit="contain"
+            className={styles.responsiveImage}
           />
         </div>
 
@@ -49,4 +45,16 @@ export default function ViewPiece() {
       </main>
     </div>
   );
+}
+
+export async function getServerSideProps(context) {
+  const { slug } = context.params;
+  const image = images.find(img => img.slug === slug);
+
+  return {
+    props: { 
+      image: image ? JSON.parse(JSON.stringify(image)) : null, 
+      slug 
+    },
+  };
 }

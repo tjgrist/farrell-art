@@ -1,10 +1,28 @@
 import ImageGallery from "react-image-gallery";
 import imageData from "./images";
 import { useRouter } from "next/router";
-import { useMemo } from "react";
+import { useState, useEffect } from "react";
 
 export default function Gallery() {
   const router = useRouter();
+  const [processedImages, setProcessedImages] = useState(imageData);
+
+  useEffect(() => {
+    const randomize = (array) => array.sort(() => Math.random() - 0.5);
+    const randomizedImages = randomize([...imageData]);
+
+    const processedImages = randomizedImages.map((i, idx) => ({
+      ...i,
+      thumbnail: i.original,
+      originalAlt: `Meegan Farrell original art piece ${idx + 1}`,
+      thumbnailAlt: `Meegan Farrell original art piece ${idx + 1}`,
+      originalTitle: i.slug,
+      loading: idx === 0 ? "eager" : "lazy",
+      thumbnailLoading: idx === 0 ? "eager" : "lazy",
+    }));
+
+    setProcessedImages(processedImages);
+  }, []);
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -12,37 +30,18 @@ export default function Gallery() {
     router.push(`/${title}`);
   };
 
-  const randomize = (array) => { 
-    return array.sort(() => Math.random() - 0.5);
-  }
-  
-  const images = useMemo(() => {
-    const randomized = randomize(imageData);
-    return randomized.map((i, idx) => { 
-      i.thumbnail = i.original;
-      i.originalAlt = `Meegan Farrell original art piece ${idx + 1}`
-      i.thumbnailAlt = `Meegan Farrell original art piece ${idx + 1}`
-      i.originalTitle = i.slug
-      i.loading = idx === 0 ? "eager" : "lazy"
-      i.thumbnailLoading = idx === 0 ? "eager" : "lazy"
-      return i;
-    });
-  }, []);
-
   return (
-    <>
-      <div className="slide-container">
-        <ImageGallery
-          showBullets={false}
-          showPlayButton={false}
-          showNav={false}
-          showFullscreenButton={false}
-          items={images}
-          lazyLoad={false}
-          thumbnailPosition="top"
-          onClick={handleClick}
-        />
-      </div>
-    </>
+    <div className="slide-container">
+      <ImageGallery
+        showBullets={false}
+        showPlayButton={false}
+        showNav={false}
+        showFullscreenButton={false}
+        items={processedImages}
+        lazyLoad={false}
+        thumbnailPosition="top"
+        onClick={handleClick}
+      />
+    </div>
   );
 }
