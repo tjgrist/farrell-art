@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Analytics } from "@vercel/analytics/react";
 import email from "../lib/email";
 
 export default function Footer() {
@@ -18,7 +17,6 @@ export default function Footer() {
           © {new Date().getFullYear()} Meegan Farrell. All rights reserved.
         </div>
       </div>
-      <Analytics />
     </footer>
   );
 }

@@ -4,6 +4,7 @@ import './styles/globals.css'
 import description from "./lib/description"
 import Navigation from './components/navigation'
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
   title: 'Meegan Farrell Art',
@@ -41,6 +42,7 @@ export default function RootLayout({ children }) {
             <Footer />
             </div>
             <SpeedInsights/>
+            <Analytics />
         </div>
       </body>
     </html>
