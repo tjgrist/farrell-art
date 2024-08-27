@@ -42,31 +42,31 @@ export default function Home({ initialProcessedImages }) {
 }
 
 export async function getServerSideProps() {
-  const randomSeed = Math.random();
+  // const randomSeed = Math.random();
 
-  const randomize = (array, seed) => {
-    const shuffled = [...array];
-    const random = (seed) => {
-      let t = seed += 0x6D2B79F5;
-      t = Math.imul(t ^ t >>> 15, t | 1);
-      t ^= t + Math.imul(t ^ t >>> 7, t | 61);
-      return ((t ^ t >>> 14) >>> 0) / 4294967296;
-    };
-    for (let i = shuffled.length - 1; i > 0; i--) {
-      const j = Math.floor(random(seed + i) * (i + 1));
-      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-    }
-    return shuffled;
-  };
+  // const randomize = (array, seed) => {
+  //   const shuffled = [...array];
+  //   const random = (seed) => {
+  //     let t = seed += 0x6D2B79F5;
+  //     t = Math.imul(t ^ t >>> 15, t | 1);
+  //     t ^= t + Math.imul(t ^ t >>> 7, t | 61);
+  //     return ((t ^ t >>> 14) >>> 0) / 4294967296;
+  //   };
+  //   for (let i = shuffled.length - 1; i > 0; i--) {
+  //     const j = Math.floor(random(seed + i) * (i + 1));
+  //     [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  //   }
+  //   return shuffled;
+  // };
 
-  const initialProcessedImages = randomize(imageData, randomSeed).map((i, idx) => ({
+  const initialProcessedImages = imageData.map((i, idx) => ({
     ...i,
     thumbnail: i.original,
     originalAlt: `Meegan Farrell original art piece ${idx + 1}`,
     thumbnailAlt: `Meegan Farrell original art piece ${idx + 1}`,
     originalTitle: i.title,
-    loading: "lazy",
-    thumbnailLoading: "lazy",
+    loading: idx === 0 ? "eager" : "lazy",
+    thumbnailLoading: idx === 0 ? "eager" : "lazy",
   }));
 
   return {
