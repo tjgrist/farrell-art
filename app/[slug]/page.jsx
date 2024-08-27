@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import images from '../lib/images';
+import ImageWithSpinner from '../components/imageWithSpinner';
 
 export async function generateMetadata({ params }) {
   const { slug } = params;
@@ -31,7 +32,7 @@ export default function ViewPiece({ params }) {
     <div>
       <main>
         <div>
-          <Image
+          <ImageWithSpinner
             src={image.original}
             alt={`Image ${slug}`}
             width={image.width}
