@@ -5,7 +5,6 @@ import ImageWithSkeleton from "../components/imageWithSkeleton";
 export async function generateMetadata({ params }) {
   const { slug } = params;
   const image = images.find((img) => img.title === slug);
-  console.log("****", image);
 
   if (!image) {
     return {
@@ -29,7 +28,9 @@ export default function ViewPiece({ params }) {
   }
 
   return (
-      <main>
+    <div className="flex items-center justify-center">
+      <main className="w-full">
+        <div className="flex justify-center">
           <ImageWithSkeleton
             src={image.original}
             alt={`Image ${slug}`}
@@ -38,7 +39,9 @@ export default function ViewPiece({ params }) {
             {...image}
             index={0}
           />
+        </div>
       </main>
+    </div>
   );
 }
 
