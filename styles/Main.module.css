@@ -144,7 +144,7 @@
   display: inline-block;
   padding: 10px 20px;
   margin-top: 20px;
-  background-color: #0070f3;
+  background-color: #001d3d;
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -152,7 +152,7 @@
 }
 
 .button:hover {
-  background-color: #0051bb;
+  background-color: #00336d;
 }
 
 .notFoundContainer {
