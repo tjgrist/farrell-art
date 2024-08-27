@@ -1,15 +1,16 @@
-import { notFound } from 'next/navigation';
-import images from '../lib/images';
-import ImageSkeleton from '../components/imageSkeleton';
+import { notFound } from "next/navigation";
+import images from "../lib/images";
+import ImageWithSkeleton from "../components/imageWithSkeleton";
 
 export async function generateMetadata({ params }) {
   const { slug } = params;
-  const image = images.find(img => img.title === slug);
+  const image = images.find((img) => img.title === slug);
+  console.log("****", image);
 
   if (!image) {
     return {
-      title: 'Not Found',
-      description: 'The requested art piece could not be found.',
+      title: "Not Found",
+      description: "The requested art piece could not be found.",
     };
   }
 
@@ -21,25 +22,23 @@ export async function generateMetadata({ params }) {
 
 export default function ViewPiece({ params }) {
   const { slug } = params;
-  const image = images.find(img => img.title === slug);
+  const image = images.find((img) => img.title === slug);
 
   if (!image) {
     notFound();
   }
 
   return (
-    <div>
       <main>
-        <div>
-          <ImageSkeleton
+          <ImageWithSkeleton
             src={image.original}
             alt={`Image ${slug}`}
             width={image.width}
             height={image.height}
+            {...image}
+            index={0}
           />
-        </div>
       </main>
-    </div>
   );
 }
 

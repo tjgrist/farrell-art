@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-const ImageSkeleton = ({ src, title }, { height, width, index}) => {
+const ImageWithSkeleton = ({ src, title, height, width, index }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
 
   return (
@@ -25,4 +25,4 @@ const ImageSkeleton = ({ src, title }, { height, width, index}) => {
   );
 };
 
-export default ImageSkeleton;
+export default ImageWithSkeleton;

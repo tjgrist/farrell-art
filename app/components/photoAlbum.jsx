@@ -4,7 +4,7 @@ import "react-photo-album/rows.css";
 import { useRouter } from "next/navigation";
 import images from "../lib/images";
 import { useCallback } from "react";
-import ImageSkeleton from "./imageSkeleton";
+import ImageWithSkeleton from "./imageWithSkeleton";
 
 const photos = images.map((photo) => ({
   ...photo,
@@ -24,7 +24,7 @@ export default function Masonry() {
     <RowsPhotoAlbum
       photos={photos}
       onClick={handleClick}
-      render={{ image: (photo, context) => ImageSkeleton(photo, context) }}
+      render={{ image: (photo, context) => ImageWithSkeleton({...photo, ...context}) }}
       skeleton={
         <div className="absolute top-30 bg-gray-200 animate-pulse rounded-md" />
       }
