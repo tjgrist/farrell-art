@@ -21,7 +21,7 @@ export default function Contact() {
         <div className="mt-8">
           <Link
             href={`mailto:${email}`}
-            className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-900 hover:bg-gray-700"
+            className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-900 hover:bg-gray-800"
           >
             Email
           </Link>
