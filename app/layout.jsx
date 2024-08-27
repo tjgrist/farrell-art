@@ -3,6 +3,7 @@ import Footer from "./components/footer"
 import './styles/globals.css'
 import description from "./lib/description"
 import Navigation from './components/navigation'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata = {
   title: 'Meegan Farrell Art',
@@ -39,7 +40,7 @@ export default function RootLayout({ children }) {
             </main>
             <Footer />
             </div>
-          
+            <SpeedInsights/>
         </div>
       </body>
     </html>
