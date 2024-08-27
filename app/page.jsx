@@ -22,7 +22,7 @@ export default async function Home() {
   const firstImage = imageData.find((i) => i.title === "DSC00408")
 
   return (
-    <main className="main">
+    <main className="">
         <Image priority={true} src={firstImage.original} alt={firstImage.title} width={firstImage.width} height={firstImage.height} />
       {/* <Gallery initialProcessedImages={initialProcessedImages} /> */}
     </main>
