@@ -16,7 +16,7 @@ export default function Contact() {
           Contact
         </h1>
         <p className="mt-4 text-lg text-gray-600">
-          I'd love to hear from you about Meegan Farrell's art or any inquiries you may have.
+          I'd love to hear from you about Meegan Farrell's art or any questions about rentals.
         </p>
         <div className="mt-8">
           <Link
