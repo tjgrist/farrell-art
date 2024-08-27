@@ -6,7 +6,11 @@ export default async function Home() {
 
   const randomImage = imageData[Math.floor(Math.random() * imageData.length)]
 
-  const firstImage = imageData.find(i => i.title === imageName || randomImage );
+  let firstImage = imageData.find(i => i.title === imageName);
+
+  if (!firstImage) {
+    firstImage = randomImage
+  }
 
   return (
     <main className="">
