@@ -4,294 +4,294 @@ const s3url = `https://${bucketName}.s3.${region}.amazonaws.com`;
 
 const slideImages = [
   {
+    original: `${s3url}/F665C9E7-F768-4A40-A31F-B3EF0F02FD5F.jpg`,
+    caption: "",
+    title: "F665C9E7-F768-4A40-A31F-B3EF0F02FD5F"
+  },
+  {
     original: `${s3url}/DSC00318.jpg`,
     caption: "",
-    slug: "DSC00318"
+    title: "DSC00318"
   },
   {
     original: `${s3url}/DSC00319.jpg`,
     caption: "",
-    slug: "DSC00319"
+    title: "DSC00319"
   },
   {
     original: `${s3url}/DSC00335.jpg`,
     caption: "",
-    slug: "DSC00335"
+    title: "DSC00335"
   },
   {
     original: `${s3url}/DSC00337.jpg`,
     caption: "",
-    slug: "DSC00337"
+    title: "DSC00337"
   },
   {
     original: `${s3url}/DSC00395.jpg`,
     caption: "",
-    slug: "DSC00395"
+    title: "DSC00395"
   },
   {
     original: `${s3url}/DSC00416.jpg`,
     caption: "",
-    slug: "DSC00416"
+    title: "DSC00416"
   },
   {
     original: `${s3url}/DSC00421.jpg`,
     caption: "",
-    slug: "DSC00421"
+    title: "DSC00421"
   },
   {
     original: `${s3url}/DSC00424.jpg`,
     caption: "",
-    slug: "DSC00424"
+    title: "DSC00424"
   },
   {
     original: `${s3url}/DSC00452.jpg`,
     caption: "",
-    slug: "DSC00452"
+    title: "DSC00452"
   },
   {
     original: `${s3url}/DSC00464.jpg`,
     caption: "",
-    slug: "DSC00464"
+    title: "DSC00464"
   },
   {
     original: `${s3url}/DSC00480.jpg`,
     caption: "",
-    slug: "DSC00480"
+    title: "DSC00480"
   },
   {
     original: `${s3url}/DSC00323.jpg`,
     caption: "",
-    slug: "DSC00323"
+    title: "DSC00323"
   },
   {
     original: `${s3url}/DSC00327.jpg`,
     caption: "",
-    slug: "DSC00327"
+    title: "DSC00327"
   },
   {
     original: `${s3url}/DSC00328.jpg`,
     caption: "",
-    slug: "DSC00328"
+    title: "DSC00328"
   },
   {
     original: `${s3url}/DSC00326.jpg`,
     caption: "",
-    slug: "DSC00326"
+    title: "DSC00326"
   },
   {
     original: `${s3url}/DSC00330.jpg`,
     caption: "",
-    slug: "DSC00330"
+    title: "DSC00330"
   },
   {
     original: `${s3url}/DSC00331.jpg`,
     caption: "",
-    slug: "DSC00331"
+    title: "DSC00331"
   },
   {
     original: `${s3url}/DSC00332.jpg`,
     caption: "",
-    slug: "DSC00332"
+    title: "DSC00332"
   },
   {
     original: `${s3url}/DSC00334.jpg`,
     caption: "",
-    slug: "DSC00334"
+    title: "DSC00334"
   },
   {
     original: `${s3url}/DSC00336.jpg`,
     caption: "",
-    slug: "DSC00336"
+    title: "DSC00336"
   },
   {
     original: `${s3url}/DSC00340.jpg`,
     caption: "",
-    slug: "DSC00340"
+    title: "DSC00340"
   },
   {
     original: `${s3url}/DSC00345.jpg`,
     caption: "",
-    slug: "DSC00345"
+    title: "DSC00345"
   },
   {
     original: `${s3url}/DSC00349.jpg`,
     caption: "",
-    slug: "DSC00349"
+    title: "DSC00349"
   },
   {
     original: `${s3url}/DSC00352.jpg`,
     caption: "",
-    slug: "DSC00352"
+    title: "DSC00352"
   },
   {
     original: `${s3url}/DSC00355.jpg`,
     caption: "",
-    slug: "DSC00355"
+    title: "DSC00355"
   },
   {
     original: `${s3url}/DSC00356.jpg`,
     caption: "",
-    slug: "DSC00356"
+    title: "DSC00356"
   },
   {
     original: `${s3url}/DSC00357.jpg`,
     caption: "",
-    slug: "DSC00357"
+    title: "DSC00357"
   },
   {
     original: `${s3url}/DSC00369.jpg`,
     caption: "",
-    slug: "DSC00369"
+    title: "DSC00369"
   },
   {
     original: `${s3url}/DSC00370.jpg`,
     caption: "",
-    slug: "DSC00370"
+    title: "DSC00370"
   },
   {
     original: `${s3url}/DSC00371.jpg`,
     caption: "",
-    slug: "DSC00371"
+    title: "DSC00371"
   },
   {
     original: `${s3url}/DSC00373.jpg`,
     caption: "",
-    slug: "DSC00373"
+    title: "DSC00373"
   },
   {
     original: `${s3url}/DSC00374.jpg`,
     caption: "",
-    slug: "DSC00374"
+    title: "DSC00374"
   },
   {
     original: `${s3url}/DSC00378.jpg`,
     caption: "",
-    slug: "DSC00378"
+    title: "DSC00378"
   },
   {
     original: `${s3url}/DSC00381.jpg`,
     caption: "",
-    slug: "DSC00381"
+    title: "DSC00381"
   },
   {
     original: `${s3url}/DSC00382.jpg`,
     caption: "",
-    slug: "DSC00382"
+    title: "DSC00382"
   },
   {
     original: `${s3url}/DSC00387.jpg`,
     caption: "",
-    slug: "DSC00387"
+    title: "DSC00387"
   },
   {
     original: `${s3url}/DSC00391.jpg`,
     caption: "",
-    slug: "DSC00391"
+    title: "DSC00391"
   },
   {
     original: `${s3url}/DSC00396.jpg`,
     caption: "",
-    slug: "DSC00396"
+    title: "DSC00396"
   },
   {
     original: `${s3url}/DSC00397.jpg`,
     caption: "",
-    slug: "DSC00397"
+    title: "DSC00397"
   },
   {
     original: `${s3url}/DSC00398.jpg`,
     caption: "",
-    slug: "DSC00398"
+    title: "DSC00398"
   },
   {
     original: `${s3url}/DSC00404.jpg`,
     caption: "",
-    slug: "DSC00404"
+    title: "DSC00404"
   },
   {
     original: `${s3url}/DSC00408.jpg`,
     caption: "",
-    slug: "DSC00408"
+    title: "DSC00408"
   },
   {
     original: `${s3url}/DSC00412.jpg`,
     caption: "",
-    slug: "DSC00412"
+    title: "DSC00412"
   },
   {
     original: `${s3url}/DSC00417.jpg`,
     caption: "",
-    slug: "DSC00417"
+    title: "DSC00417"
   },
   {
     original: `${s3url}/DSC00420.jpg`,
     caption: "",
-    slug: "DSC00420"
+    title: "DSC00420"
   },
   {
     original: `${s3url}/DSC00433.jpg`,
     caption: "",
-    slug: "DSC00433"
+    title: "DSC00433"
   },
   {
     original: `${s3url}/DSC00434.jpg`,
     caption: "",
-    slug: "DSC00434"
+    title: "DSC00434"
   },
   {
     original: `${s3url}/DSC00441.jpg`,
     caption: "",
-    slug: "DSC00441"
+    title: "DSC00441"
   },
   {
     original: `${s3url}/DSC00446.jpg`,
     caption: "",
-    slug: "DSC00446"
+    title: "DSC00446"
   },
   {
     original: `${s3url}/DSC00466.jpg`,
     caption: "",
-    slug: "DSC00466"
+    title: "DSC00466"
   },
   {
     original: `${s3url}/DSC00470.jpg`,
     caption: "",
-    slug: "DSC00470"
+    title: "DSC00470"
   },
   {
     original: `${s3url}/DSC00477.jpg`,
     caption: "",
-    slug: "DSC00477"
+    title: "DSC00477"
   },
   {
     original: `${s3url}/DSC00483.jpg`,
     caption: "",
-    slug: "DSC00483"
+    title: "DSC00483"
   },
   {
     original: `${s3url}/DSC00485.jpg`,
     caption: "",
-    slug: "DSC00485"
+    title: "DSC00485"
   },
   {
     original: `${s3url}/DSC00492.jpg`,
     caption: "",
-    slug: "DSC00492"
+    title: "DSC00492"
   },
   {
     original: `${s3url}/DSC00508.jpg`,
     caption: "",
-    slug: "DSC00508"
+    title: "DSC00508"
   },
   {
-    original: `${s3url}/F665C9E7-F768-4A40-A31F-B3EF0F02FD5F.jpg`,
+    original: `${s3url}/IMG_3064-2.jpg`,
     caption: "",
-    slug: "F665C9E7-F768-4A40-A31F-B3EF0F02FD5F"
-  },
-  {
-    original: `${s3url}/IMAGE_3064-2.jpg`,
-    caption: "",
-    slug: "IMAGE_3064-2"
+    title: "IMG_3064-2"
   },
 ];
 

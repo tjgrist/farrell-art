@@ -3,16 +3,12 @@ import Head from 'next/head';
 import Link from 'next/link';
 import styles from '../styles/Main.module.css';
 import images from '../src/images';
+import NotFound from '../src/notFound';
 
 export default function ViewPiece({ image, slug }) {
   if (!image) {
     return (
-      <div className={styles.container}>
-        <h1>Art piece not found</h1>
-        <Link href="/">
-          <a className={styles.button}>Back to Gallery</a>
-        </Link>
-      </div>
+      <NotFound />
     );
   }
 
@@ -25,8 +21,7 @@ export default function ViewPiece({ image, slug }) {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>{slug}</h1>
-
+        
         <div className={styles.imageContainer}>
           <img
             src={image.original}
@@ -34,6 +29,8 @@ export default function ViewPiece({ image, slug }) {
             className={styles.responsiveImage}
           />
         </div>
+
+        {/* <h6 className={styles.title.description}>{slug}</h6> */}
 
         <div className={styles.description}>
           <p>{image.caption}</p>
@@ -49,7 +46,7 @@ export default function ViewPiece({ image, slug }) {
 
 export async function getServerSideProps(context) {
   const { slug } = context.params;
-  const image = images.find(img => img.slug === slug);
+  const image = images.find(img => img.title === slug);
 
   return {
     props: { 
