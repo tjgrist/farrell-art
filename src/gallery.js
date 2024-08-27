@@ -12,34 +12,6 @@ export default function Gallery({ initialProcessedImages }) {
     router.push(`/${title}`);
   }, [router]);
 
-  const renderItem = useCallback((item) => {
-    return (
-      <div className="image-gallery-image">
-        <img
-          title={item.title}
-          src={item.original}
-          alt={item.originalAlt}
-          loading={item.loading}
-          style={{ width: '100%', height: 'auto' }}
-        />
-      </div>
-    );
-  }, []);
-
-  const renderThumbInner = useCallback((item) => {
-    return (
-      <div className="image-gallery-thumbnail-inner">
-        <img
-          title={item.title}
-          src={item.thumbnail}
-          alt={item.thumbnailAlt}
-          loading={item.thumbnailLoading}
-          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-        />
-      </div>
-    );
-  }, []);
-
   return (
     <div className="slide-container">
       <ImageGallery
@@ -48,8 +20,6 @@ export default function Gallery({ initialProcessedImages }) {
         showNav={false}
         showFullscreenButton={false}
         items={initialProcessedImages}
-        renderItem={renderItem}
-        renderThumbInner={renderThumbInner}
         thumbnailPosition="top"
         onClick={handleClick}
       />

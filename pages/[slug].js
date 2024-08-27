@@ -27,6 +27,8 @@ export default function ViewPiece({ image, slug }) {
             src={image.original}
             alt={`Image ${slug}`}
             className={styles.responsiveImage}
+            width={image.width}
+            height={image.height}
           />
         </div>
 
