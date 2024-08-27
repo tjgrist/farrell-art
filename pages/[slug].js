@@ -15,8 +15,8 @@ export default function ViewPiece({ image, slug }) {
   return (
     <div className={styles.container}>
       <Head>
-        <title>{`Art piece: ${slug}`}</title>
-        <meta name="description" content={`Viewing art piece: ${slug}`} />
+        <title>{`Meegan Farrell Art | ${slug}`}</title>
+        <meta name="description" content={`Art piece: ${slug} by Wisconsin Meegan Farrell.`} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
