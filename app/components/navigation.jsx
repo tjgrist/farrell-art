@@ -36,7 +36,7 @@ const Navigation = () => {
                   className={`px-3 py-2 rounded-md text-sm font-medium ${
                     pathname === item.path
                       ? 'bg-gray-900 text-white'
-                      : 'text-gray-600 hover:bg-gray-700 hover:text-white'
+                      : 'text-gray-700 hover:bg-gray-400 hover:text-white'
                   }`}
                 >
                   {item.name}
@@ -47,7 +47,7 @@ const Navigation = () => {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+              className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
             >
               <span className="sr-only">Open main menu</span>
               {isOpen ? (
@@ -70,7 +70,7 @@ const Navigation = () => {
                 className={`block px-3 py-2 rounded-md text-base font-medium ${
                   pathname === item.path
                     ? 'bg-gray-900 text-white'
-                    : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+                    : 'text-gray-700 hover:bg-gray-400 hover:text-white'
                 }`}
                 onClick={toggleMenu}
               >
