@@ -23,7 +23,7 @@ export default async function Home() {
 
   return (
     <main className="main">
-        <Image src={firstImage.original} alt={firstImage.title} width={firstImage.width} height={firstImage.height} />
+        <Image priority={true} src={firstImage.original} alt={firstImage.title} width={firstImage.width} height={firstImage.height} />
       {/* <Gallery initialProcessedImages={initialProcessedImages} /> */}
     </main>
   )

@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
-const ImageWithSpinner = ({ src, alt, width, height, className }) => {
+const ImageWithSkeleton = ({ src, alt, width, height, className }) => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -13,9 +13,7 @@ const ImageWithSpinner = ({ src, alt, width, height, className }) => {
   return (
     <div className="relative">
       {isLoading && (
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
-        </div>
+        <div className="absolute inset-0 bg-gray-200 animate-pulse rounded-md" />
       )}
       <Image
         src={src}
@@ -29,4 +27,4 @@ const ImageWithSpinner = ({ src, alt, width, height, className }) => {
   );
 };
 
-export default ImageWithSpinner;
+export default ImageWithSkeleton;
