@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import images from '../lib/images';
-import ImageWithSkeleton from '../components/imageWithSkeleton';
+import ImageSkeleton from '../components/imageSkeleton';
 
 export async function generateMetadata({ params }) {
   const { slug } = params;
@@ -31,7 +31,7 @@ export default function ViewPiece({ params }) {
     <div>
       <main>
         <div>
-          <ImageWithSkeleton
+          <ImageSkeleton
             src={image.original}
             alt={`Image ${slug}`}
             width={image.width}
