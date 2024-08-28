@@ -1,9 +1,7 @@
 const { execSync } = require('child_process');
-const fs = require('fs');
-const path = require('path');
 
 // Run the image metadata script
-console.log('Running image metadata script...');
+console.log('Downloading images metadata...');
 execSync('node getImages.js', { stdio: 'inherit' });
 
 // Run the Next.js build

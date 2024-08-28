@@ -10,6 +10,12 @@ const nextConfig = {
         port: '',
         pathname: '/*',
       },
+      {
+        protocol: 'https',
+        hostname: 'meegan-farrell-art-bucket.s3.amazonaws.com',
+        port: '',
+        pathname: '/**/*',
+      },
     ],
   },
 }
