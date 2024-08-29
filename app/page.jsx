@@ -1,3 +1,4 @@
+import EmblaCarousel from "./components/carousel";
 import imageData from "./lib/images"
 import Image from "next/image"
 
@@ -12,9 +13,18 @@ export default async function Home() {
     firstImage = randomImage
   }
 
+  const slides = imageData.map((image) => ({
+      ...image,
+      src: image.original,
+      alt: image.title,
+  }));
+
+  // put the firstImage at the start of slides 
+  const firstImageIndex = slides.findIndex(i => i.title === firstImage.title)
+
   return (
     <main className="">
-        <Image priority={true} src={firstImage.original} alt={firstImage.title} width={firstImage.width} height={firstImage.height} />
+        <EmblaCarousel slides={slides} startIndex={firstImageIndex} />
     </main>
   )
 }
