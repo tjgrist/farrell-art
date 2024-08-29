@@ -25,7 +25,7 @@ const nextConfig = {
   },
   env: {
     NEXT_PUBLIC_GA_MEASUREMENT_ID: "G-41ZW7BWZXY",
-    NEXT_PUBLIC_IMAGE_NAME: 'DSC00355',
+    NEXT_PUBLIC_IMAGE_NAME: "images/DSC00355",
     S3_REGION: process.env.S3_REGION || new Error('S3_REGION is required'),
     AWS_ACCESS_KEY_ID: process.env.AWS_ACCESS_KEY_ID || new Error('AWS_ACCESS_KEY_ID is required'),
     AWS_ACCESS_KEY_SECRET: process.env.AWS_ACCESS_KEY_SECRET || new Error('AWS_ACCESS_KEY_SECRET is required'),
