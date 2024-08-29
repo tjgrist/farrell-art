@@ -1,4 +1,4 @@
-Site: [https://meegan-farrell-art.site](https://meegan-farrell-art.site)
+Site: [https://meeganfarrellart.site](https://meeganfarrellart.site)
 
 ## Adding images
 

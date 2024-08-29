@@ -13,10 +13,10 @@ export default function Contact() {
     <div className="min-h-screen py-12 px-4 sm:px-6 lg:px-8 flex flex-col items-center justify-center">
       <div className="max-w-md w-full space-y-8 text-center">
         <h1 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
-          Contact
+          Get in touch
         </h1>
         <p className="mt-4 text-lg text-gray-600">
-          I'd love to hear from you about Meegan Farrell's art or any questions about rentals.
+          I'd love to hear from you about Meegan Farrell's art or any questions about rentals/loans.
         </p>
         <div className="mt-8">
           <Link
