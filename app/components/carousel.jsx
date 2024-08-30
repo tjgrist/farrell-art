@@ -73,7 +73,7 @@ const EmblaCarousel = ({ slides }) => {
                   onLoadingComplete={(event) => onImageLoad(event, index)}
                   width={slide.width}
                   height={slide.height}
-                  priority={index === 0 || startIndex === index}
+                  priority={index === 0}
                 />
               </div>
             </div>
