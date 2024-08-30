@@ -5,8 +5,8 @@ import useEmblaCarousel from "embla-carousel-react";
 import ImageWithSkeleton from "../components/imageWithSkeleton";
 import "../styles/embla.css";
 
-const EmblaCarousel = ({ slides, startIndex }) => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, startIndex: startIndex });
+const EmblaCarousel = ({ slides }) => {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
   const [nextBtnEnabled, setNextBtnEnabled] = useState(false);
   const [slideHeights, setSlideHeights] = useState([]);
