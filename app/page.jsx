@@ -1,17 +1,20 @@
 import EmblaCarousel from "./components/carousel";
 import imageData from "./lib/images"
 
-export default async function Home() {
-
-  const slides = imageData.map((image) => ({
-      ...image,
-      src: image.original,
-      alt: image.title,
+function prepareSlides(imageData) {
+  return imageData.map((image) => ({
+    ...image,
+    src: image.original,
+    alt: image.title,
   }));
+}
+
+export default async function Home() {
+  const slides = prepareSlides(imageData);
 
   return (
-    <main className="">
-        <EmblaCarousel slides={slides} />
+    <main>
+      <EmblaCarousel slides={slides} />
     </main>
-  )
+  );
 }

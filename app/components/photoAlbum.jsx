@@ -6,10 +6,13 @@ import images from "../lib/images";
 import { useCallback } from "react";
 import ImageWithSkeleton from "./imageWithSkeleton";
 
-const photos = images.map((photo) => ({
-  ...photo,
-  src: photo.original,
-}));
+const processPhotos = () => 
+  images.map((photo) => ({
+    ...photo,
+    src: photo.original,
+  }));
+
+const photos = processPhotos();
 
 export default function Masonry() {
   const router = useRouter();
