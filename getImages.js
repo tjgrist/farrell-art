@@ -19,6 +19,19 @@ async function getImageDimensions(imageBuffer) {
   return { width: metadata.width, height: metadata.height };
 }
 
+function parseImageName(input) {
+  // Extract the filename from the path
+  const filename = input.split('/').pop();
+  
+  // Remove leading digits
+  const withoutDigits = filename.replace(/^\d+/, '');
+  
+  // Remove the file ext
+  const withoutFileExtension = withoutDigits.replace(/\.[^/.]+$/, "");
+  
+  return withoutFileExtension;
+}
+
 async function getImagesMetadata() {
   const command = new ListObjectsV2Command({
     Bucket: bucketName,
@@ -45,7 +58,7 @@ async function getImagesMetadata() {
         original: `https://${bucketName}.s3.amazonaws.com/${object.Key}`,
         width,
         height,
-        title: object.Key.replace(/\.[^/.]+$/, ""), // remove file extension
+        title: parseImageName(object.Key),
       });
     }
   }

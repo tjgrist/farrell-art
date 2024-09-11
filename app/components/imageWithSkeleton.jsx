@@ -1,9 +1,19 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import parseImageName from "../lib/parseImageName";
 
-const ImageWithSkeleton = ({ src, title, height, width, index }) => {
+const ImageWithSkeleton = ({ src, title, height, width, index, showTitle = true }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
+  const router = useRouter();
+
+  const handleClick = useCallback(
+    (e) => {
+      router.push(`/${e.target.alt}`);
+    },
+    [router]
+  );
 
   return (
     <div className="relative">
@@ -12,7 +22,7 @@ const ImageWithSkeleton = ({ src, title, height, width, index }) => {
       )}
       <Image
         src={src}
-        alt={`Meegan Farrell original art piece ${title}`}
+        alt={title}
         width={width}
         height={height}
         onLoad={() => setImageLoaded(true)}
@@ -20,7 +30,9 @@ const ImageWithSkeleton = ({ src, title, height, width, index }) => {
         className={`rounded-xs ${
           imageLoaded ? "opacity-100" : "opacity-0"
         } transition-opacity duration-300`}
+        onClick={handleClick}
       />
+      {showTitle && <div className="flex justify-center mt-2 text-gray-600">{parseImageName(title)}</div>}
     </div>
   );
 };

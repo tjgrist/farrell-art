@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
-import images from "../../lib/images";
-import ImageWithSkeleton from "../../components/imageWithSkeleton";
+import images from "../lib/images";
+import ImageWithSkeleton from "../components/imageWithSkeleton";
 
 function getImage(slug) { return images.find((img) => img.title.includes(slug)) };
 
@@ -35,7 +35,7 @@ export default function ViewPiece({ params }) {
         <div className="flex justify-center">
           <ImageWithSkeleton
             src={image.original}
-            alt={`Image ${slug}`}
+            alt={image.title}
             width={image.width}
             height={image.height}
             {...image}
@@ -47,8 +47,8 @@ export default function ViewPiece({ params }) {
   );
 }
 
-export async function generateStaticParams() {
-  return images.map((image) => ({
-    slug: image.title,
-  }));
-}
+// export async function generateStaticParams() {
+//   return images.map((image) => ({
+//     slug: image.title,
+//   }));
+// }

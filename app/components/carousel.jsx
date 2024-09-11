@@ -74,6 +74,7 @@ const EmblaCarousel = ({ slides }) => {
                   width={slide.width}
                   height={slide.height}
                   priority={index === 0}
+                  title={slide.title}
                 />
               </div>
             </div>
