@@ -20,16 +20,30 @@ async function getImageDimensions(imageBuffer) {
 }
 
 function parseImageName(input) {
-  // Extract the filename from the path
   const filename = input.split('/').pop();
   
-  // Remove leading digits
-  const withoutDigits = filename.replace(/^\d+/, '');
-  
-  // Remove the file ext
-  const withoutFileExtension = withoutDigits.replace(/\.[^/.]+$/, "");
+  const withoutFileExtension = filename.replace(/\.[^/.]+$/, "");
   
   return withoutFileExtension;
+}
+
+function parseTitle(input) {
+  const filename = input.split('/').pop();
+
+  const withoutFileExtension = filename.replace(/\.[^/.]+$/, "");
+
+  if (!/^\d{2}/.test(withoutFileExtension)) {
+    return withoutFileExtension;
+  }
+  
+  // Remove leading digits
+  const withoutDigits = withoutFileExtension.replace(/^\d+/, '');
+  
+  // Add space before capital letters, trim, and escape any existing quotes
+  const parsed = withoutDigits.replace(/([A-Z])/g, ' $1').trim().replace(/"/g, '\\"');
+
+  // Return the result wrapped in quotes
+  return `"${parsed}"`;
 }
 
 async function getImagesMetadata() {
@@ -56,10 +70,11 @@ async function getImagesMetadata() {
 
       images.push({
         original: `https://${bucketName}.s3.amazonaws.com/${object.Key}`,
+        src: `https://${bucketName}.s3.amazonaws.com/${object.Key}`,
+        alt: parseImageName(object.Key),
+        title: parseTitle(object.Key),
         width,
         height,
-        title: parseImageName(object.Key),
-        path: object.Key
       });
     }
   }

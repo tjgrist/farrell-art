@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import images from "../lib/images";
 import ImageWithSkeleton from "../components/imageWithSkeleton";
 
-function getImage(slug) { return images.find((img) => img.title.includes(slug)) };
+function getImage(alt) { return images.find((img) => img.alt.includes(alt)) };
 
 export async function generateMetadata({ params }) {
   const { slug } = params;
@@ -16,8 +16,8 @@ export async function generateMetadata({ params }) {
   }
 
   return {
-    title: `Meegan Farrell Art | ${slug}`,
-    description: `Piece: ${slug} by Wisconsin artist Meegan Farrell.`,
+    title: `Meegan Farrell Art | ${image.title}`,
+    description: `Piece: ${image.title} by Wisconsin artist Meegan Farrell.`,
   };
 }
 
@@ -34,10 +34,6 @@ export default function ViewPiece({ params }) {
       <main className="w-full">
         <div className="flex justify-center">
           <ImageWithSkeleton
-            src={image.original}
-            alt={image.title}
-            width={image.width}
-            height={image.height}
             {...image}
             index={0}
           />
@@ -46,9 +42,3 @@ export default function ViewPiece({ params }) {
     </div>
   );
 }
-
-// export async function generateStaticParams() {
-//   return images.map((image) => ({
-//     slug: image.title,
-//   }));
-// }

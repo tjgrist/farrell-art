@@ -5,7 +5,7 @@ function prepareSlides(imageData) {
   return imageData.map((image) => ({
     ...image,
     src: image.original,
-    alt: image.title,
+    alt: image.alt,
   }));
 }
 

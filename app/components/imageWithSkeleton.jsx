@@ -2,17 +2,16 @@
 import React, { useState, useCallback } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import parseImageName from "../lib/parseImageName";
 
-const ImageWithSkeleton = ({ src, title, height, width, index, showTitle = true }) => {
+const ImageWithSkeleton = ({ src, alt, title, height, width, index, showTitle = true }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
   const router = useRouter();
 
   const handleClick = useCallback(
-    (e) => {
-      router.push(`/${e.target.alt}`);
+    () => {
+      router.push(`/${alt}`);
     },
-    [router]
+    [router, alt]
   );
 
   return (
@@ -22,7 +21,7 @@ const ImageWithSkeleton = ({ src, title, height, width, index, showTitle = true 
       )}
       <Image
         src={src}
-        alt={title}
+        alt={alt}
         width={width}
         height={height}
         onLoad={() => setImageLoaded(true)}
@@ -32,7 +31,7 @@ const ImageWithSkeleton = ({ src, title, height, width, index, showTitle = true 
         } transition-opacity duration-300`}
         onClick={handleClick}
       />
-      {showTitle && <div className="flex justify-center mt-2 text-gray-600">{parseImageName(title)}</div>}
+      {imageLoaded && showTitle && <div className="flex justify-center mt-2 text-gray-600">{title}</div>}
     </div>
   );
 };

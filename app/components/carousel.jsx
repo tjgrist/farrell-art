@@ -68,13 +68,9 @@ const EmblaCarousel = ({ slides }) => {
               <div className="embla__slide__inner">
                 <ImageWithSkeleton
                   className="embla__slide__img"
-                  src={slide.src}
-                  alt={slide.alt}
                   onLoadingComplete={(event) => onImageLoad(event, index)}
-                  width={slide.width}
-                  height={slide.height}
                   priority={index === 0}
-                  title={slide.title}
+                  {...slide}
                 />
               </div>
             </div>
