@@ -28,7 +28,7 @@ const ImageWithSkeleton = ({ src, title, height, width, index, showTitle = true 
         onLoad={() => setImageLoaded(true)}
         priority={index <= 10}
         className={`rounded-xs ${
-          imageLoaded ? "opacity-100" : "opacity-0"
+          imageLoaded ? "opacity-100 cursor-pointer" : "opacity-0"
         } transition-opacity duration-300`}
         onClick={handleClick}
       />
