@@ -59,6 +59,7 @@ async function getImagesMetadata() {
         width,
         height,
         title: parseImageName(object.Key),
+        path: object.Key
       });
     }
   }
