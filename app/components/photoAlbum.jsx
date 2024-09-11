@@ -14,7 +14,7 @@ const processPhotos = () =>
 
 const photos = processPhotos();
 
-export default function Masonry() {
+export default function PhotoAlbum() {
   const router = useRouter();
 
   const handleClick = useCallback(

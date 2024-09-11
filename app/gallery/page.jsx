@@ -1,5 +1,5 @@
-import Masonry from "../components/photoAlbum";
+import PhotoAlbum from "../components/photoAlbum";
 
 export default function Page() {
-    return <Masonry />;
+    return <PhotoAlbum />;
 }
