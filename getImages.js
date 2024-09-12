@@ -33,7 +33,7 @@ function parseTitle(input) {
   const withoutFileExtension = filename.replace(/\.[^/.]+$/, "");
 
   if (!/^\d{2}/.test(withoutFileExtension)) {
-    return withoutFileExtension;
+    return "";
   }
   
   // Remove leading digits
