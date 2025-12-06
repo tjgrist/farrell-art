@@ -1,4 +1,4 @@
-Site: [https://meeganfarrellart.site](https://meeganfarrellart.site)
+Site: [https://meeganfarrellart.vercell.app](https://meeganfarrellart.vercel.app)
 
 ## Adding images and updating the site
 
